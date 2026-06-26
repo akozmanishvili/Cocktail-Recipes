@@ -1,7 +1,13 @@
-import { useState } from "react";
-
+import { Outlet } from "react-router-dom";
 function App() {
-  return <h1>Cocktail App</h1>;
+  return (
+    <>
+      <nav>navbar here</nav>
+      <main>
+        <Outlet />
+      </main>
+    </>
+  );
 }
 
 export default App;
