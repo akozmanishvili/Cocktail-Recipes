@@ -6,7 +6,7 @@ const CleanDrinkData = (drink) => {
     const measure = drink[`strMeasure${i}`];
 
     if (!ingredient) break;
-    ingredients.push(ingredient, measure ? measure : "to taste");
+    ingredients.push({ ingredient, measure: measure || "to taste" });
   }
 
   return {

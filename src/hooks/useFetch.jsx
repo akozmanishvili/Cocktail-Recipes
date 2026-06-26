@@ -5,15 +5,15 @@ const useFetch = (url) => {
   const [isLoading, SetIsLoading] = useState(true);
   const [error, setError] = useState(false);
 
-  const controller = new AbortController();
-
   useEffect(() => {
     SetIsLoading(true);
     setError(false);
 
+    const controller = new AbortController();
+
     async function fetchData() {
       try {
-        const response = await fetch(url, controller.signal);
+        const response = await fetch(url, { signal: controller.signal });
         const json = await response.json();
         setData(json);
       } catch (err) {
