@@ -5,7 +5,7 @@ const CocktailCard = ({ id, name, image, category, glass }) => {
     <div className="cocktail-card">
       <img src={image} alt={name}></img>
       <div className="cocktail-info">
-        <p>{name}</p>
+        <h3>{name}</h3>
         <p>{category}</p>
         <p>{glass}</p>
         <Link to={`/cocktails/${id}`}></Link>

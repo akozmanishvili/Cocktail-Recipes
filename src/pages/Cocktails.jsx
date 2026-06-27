@@ -42,13 +42,18 @@ const Cocktails = () => {
         value={query}
         onChange={(e) => setQuery(e.target.value)}
       />
-      <ul>
-        {drink.map((SingleDrink) => {
-          return (
-            <CocktailCard key={SingleDrink.id} {...SingleDrink}></CocktailCard>
-          );
-        })}
-      </ul>
+      <div className="cocktail-grid">
+        <ul>
+          {drink.map((SingleDrink) => {
+            return (
+              <CocktailCard
+                key={SingleDrink.id}
+                {...SingleDrink}
+              ></CocktailCard>
+            );
+          })}
+        </ul>
+      </div>
     </div>
   );
 };
