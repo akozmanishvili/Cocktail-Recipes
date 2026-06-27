@@ -32,11 +32,6 @@ const Home = () => {
             <h3>Name: {name}</h3>
             <p>Category: {category}</p>
             <p>Alcoholic type: {alcoholic}</p>
-            <h3>Ingredients</h3>
-            <Link to={"/cocktails/${id}"} className="hero-btn">
-              {" "}
-              See Recipe{" "}
-            </Link>
           </div>
         </div>
       </div>
