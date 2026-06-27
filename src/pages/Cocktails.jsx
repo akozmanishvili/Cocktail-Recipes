@@ -12,7 +12,7 @@ const Cocktails = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setDebouncedQuery(query);
-    }, 1000);
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, [query]);
