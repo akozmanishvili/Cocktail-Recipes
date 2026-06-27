@@ -62,6 +62,7 @@ input {
 
 .cocktail-card img {
   width: 100%;
+  height: 600px;
   aspect-ratio: 1;
   object-fit: cover;
 }
@@ -156,4 +157,53 @@ input {
   .single-cocktail-content {
     grid-template-columns: 1fr;
   }
+}
+
+.home-hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.home-hero h1 {
+  font-size: 2.5rem;
+  max-width: 600px;
+  color: white;
+}
+
+.home-hero p {
+  color: #666;
+  font-size: 1.1rem;
+  color: green;
+}
+
+.hero-btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #2d2d2d;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+.hero-btn:hover {
+  background: #f0a500;
+  color: #2d2d2d;
+}
+
+.featured {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.featured h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: white;
 }
