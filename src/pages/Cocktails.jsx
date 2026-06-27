@@ -1,7 +1,8 @@
 import { useEffect, useState, useRef } from "react";
 import useFetch from "../hooks/useFetch";
 import CleanDrinkData from "../utils/CleanDrinkData";
-import { use } from "react";
+import CocktailCard from "../components/CocktailCard";
+
 const BASE_URL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=";
 
 const Cocktails = () => {
@@ -19,7 +20,7 @@ const Cocktails = () => {
   const url = `${BASE_URL}${debouncedQuery}`;
 
   const { data, error, isLoading } = useFetch(url);
-  const drinks = data?.drinks ? data.drinks.map(CleanDrinkData) : [];
+  const drink = data?.drinks ? data.drinks.map(CleanDrinkData) : [];
 
   const inputRef = useRef(null);
 
@@ -42,8 +43,10 @@ const Cocktails = () => {
         onChange={(e) => setQuery(e.target.value)}
       />
       <ul>
-        {drinks.map((SingleDrink) => {
-          return <li key={SingleDrink.id}>{SingleDrink.name}</li>;
+        {drink.map((SingleDrink) => {
+          return (
+            <CocktailCard key={SingleDrink.id} {...SingleDrink}></CocktailCard>
+          );
         })}
       </ul>
     </div>
