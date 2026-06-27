@@ -9,12 +9,17 @@ const SingleCocktail = () => {
   const { id } = useParams();
   const { data, error, isLoading } = useFetch(`${BASE_URL}${id}`);
 
+  console.log(data);
+
   if (isLoading) return <h3>Loading...</h3>;
   if (error) return <h2>404-Error: Not Found</h2>;
 
-  console.log("data:", data);
-
   const drink = data?.drinks ? CleanDrinkData(data.drinks[0]) : null;
+
+  if (!drink) {
+    return <h2>No Cocktail Found...</h2>;
+  }
+
   const { name, image, category, glass, alcoholic, instructions, ingredients } =
     drink;
 
