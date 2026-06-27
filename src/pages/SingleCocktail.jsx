@@ -39,7 +39,7 @@ const SingleCocktail = () => {
             Glass type: <span>{glass}</span>
           </p>
           <p>
-            Alcoholic: <span>{alcoholic}</span>
+            Alcoholic Type: <span>{alcoholic}</span>
           </p>
           <h3>Ingredients</h3>
           <ul>
