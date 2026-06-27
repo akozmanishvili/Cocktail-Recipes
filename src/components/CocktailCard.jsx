@@ -8,7 +8,7 @@ const CocktailCard = ({ id, name, image, category, glass }) => {
         <h3>{name}</h3>
         <p>{category}</p>
         <p>{glass}</p>
-        <Link to={`/cocktails/${id}`}></Link>
+        <Link to={`/cocktails/${id}`}>Details</Link>
       </div>
     </div>
   );
